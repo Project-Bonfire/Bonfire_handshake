@@ -43,7 +43,6 @@ LATENCY_CALCULATION_PATH = "calculate_latency.py"
 # Default simulation configuration
 program_argv = {
         'network_dime':    4,
-        'credit_based_FC': False,
         'add_parity':      False,
         'add_checkers':    False,
         'packet_drop':     False,

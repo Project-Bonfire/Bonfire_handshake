@@ -16,7 +16,7 @@ def gen_network_and_tb(program_argv, flow_control_type):
         + ("_NI" if program_argv['add_NI'] != -1 else "") \
         + ("_packet_drop" if program_argv['packet_drop'] else "") \
         + ("_SHMU" if program_argv['add_SHMU'] else "") \
-        + ("_credit_based" if program_argv['credit_based_FC'] else "_handshaking") \
+        + "_handshaking" \
         + ("_with_checkers" if program_argv['add_checkers'] else "") \
         + ".vhd"
 
@@ -48,16 +48,13 @@ def gen_network_and_tb(program_argv, flow_control_type):
         + ("_Rand" if program_argv['rand'] != -1 else "") \
         + ("_SHMU" if program_argv['add_SHMU'] else "") \
         + ("_BR" if program_argv['BR'] != -1 else "") \
-        + ("_credit_based" if program_argv['credit_based_FC'] else "_handshaking") \
+        + "_handshaking" \
         + ("_with_checkers" if program_argv['add_checkers'] else "") \
         + "_tb.vhd"
 
     NI_status = ""
-    if program_argv['add_NI'] != -1:
-        if program_argv['credit_based_FC']:
-            NI_status = " -PE"
-        else:
-            NI_status = " -NI " + str(program_argv['add_NI'])
+    if program_argv['add_NI'] != -1:            
+        NI_status = " -NI " + str(program_argv['add_NI'])
 
     net_tb_gen_command = "python " + SCRIPTS_DIR + "/" + flow_control_type \
         + "/" + NET_TB_GEN_SCRIPT + "_" + flow_control_type + ".py" \
