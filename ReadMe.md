@@ -1,4 +1,4 @@
-Welcome to Bonfire project, a Network on Chip based System on Chip developed in Tallinn University of Technology by the following authors: 
+Welcome to Handshake version of Bonfire project, a Network on Chip based System on Chip developed in Tallinn University of Technology by the following authors: 
 
   * Siavoosh Payandeh Azad
   * Karl Janson
@@ -9,7 +9,7 @@ Welcome to Bonfire project, a Network on Chip based System on Chip developed in 
  
 If you use Bonfire in your research work, we would appreciate the following paper to be cited in any publications to which Bonfire has contributed to:
 
-* From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach. Siavoosh Payandeh Azad, Behrad Niazmand, Karl Janson, Nevin George, Adeboye Stephen Oyeniran, Tsotne Putkaradze,Apneet Kaur, Jaan Raik, Gert Jervan, Raimund Ubar, Thomas Hollstein, DDECS 2017
+	* From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach. Siavoosh Payandeh Azad, Behrad Niazmand, Karl Janson, Nevin George, Adeboye Stephen Oyeniran, Tsotne Putkaradze,Apneet Kaur, Jaan Raik, Gert Jervan, Raimund Ubar, Thomas Hollstein, DDECS 2017
 
 ----------
 
