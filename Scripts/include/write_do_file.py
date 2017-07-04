@@ -86,16 +86,9 @@ def write_do_file(program_argv, net_file_name, net_tb_file_name, wave_do_file_na
     # End of handshaking based flow control
 
     # Include file for the testbench
-    if program_argv['NI_Test']:
-        do_file.write("vcom \"" + TEST_DIR + "/credit_based" \
-            + "/TB_Package_32_bit_credit_based_NI.vhd\"\n")
-    else:
-        do_file.write("vcom \"" + TEST_DIR + "/" + flow_control_type \
-            + "/TB_Package_32_bit_" + flow_control_type + ".vhd\"\n")
-
-    if program_argv['trace'] and flow_control_type == "credit_based":
-        do_file.write("vcom \"" + ROUTER_RTL_DIR + "/" + flow_control_type \
-        + "/RTL/flit_tracker.vhd\"\n")
+  
+    do_file.write("vcom \"" + TEST_DIR + "/" + flow_control_type \
+        + "/TB_Package_32_bit_" + flow_control_type + ".vhd\"\n")
 
     # Generated network files
     do_file.write("vcom \"" +  net_file_name + "\"\n")
